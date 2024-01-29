@@ -1,7 +1,13 @@
-function renderTodoList() {
-    const container = document.querySelector(".todoListContainer")
-    const todoList = document.createElement("ul")
-    const todo = document.createElement("li")
+let todoList = []
 
-    const todoContainer = document.createElement("div")
+const addTodoForm = document.getElementById("addTodoForm")
+addTodoForm.addEventListener("submit", function handleNewTodo(e) {
+    e.preventDefault()
+    const newTodo = e.target.elements[0].value
+    addNewTodo(newTodo)
+})
+
+function addNewTodo(newTodo) {
+    todoList.push(newTodo)
+    return todoList
 }
