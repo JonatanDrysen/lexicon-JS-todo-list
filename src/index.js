@@ -1,6 +1,12 @@
-import { createArrowUp, createArrowDown, createDone, createRemove } from "./utils/buttons.js"
+import { 
+    createArrowUp, 
+    createArrowDown, 
+    createDone, 
+    createRemove 
+} from "./utils/buttons.js"
 
 let todoArr = []
+let doneTodoArr = []
 
 const addTodoForm = document.getElementById("addTodoForm")
 addTodoForm.addEventListener("submit", function handleNewTodo(e) {
@@ -16,6 +22,10 @@ function addNewTodo(newTodo) {
     todoArr.unshift(newTodo)
 }
 
+function completeTodo(todo) {
+    console.log("todo completed: ", todo)
+}
+
 function renderTodoList() {
     const container = document.querySelector(".todoListContainer")
     const todoList = document.createElement("ul")
@@ -26,12 +36,19 @@ function renderTodoList() {
         const todoText = document.createElement("span")
         const arrowUpButton = createArrowUp()
         const arrowDownButton = createArrowDown()
-        const removeButton = createRemove()
         const doneButton = createDone()
+        const removeButton = createRemove()
 
         todoText.innerText = todoItem
+        doneButton.addEventListener("click", () => completeTodo(todoItem))
 
-        todoContainer.append(todoText, arrowUpButton, arrowDownButton, removeButton, doneButton)
+        todoContainer.append(
+            todoText, 
+            arrowUpButton, 
+            arrowDownButton, 
+            doneButton,
+            removeButton 
+        )
         todo.appendChild(todoContainer)
         todoList.appendChild(todo)
     })

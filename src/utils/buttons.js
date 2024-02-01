@@ -2,7 +2,7 @@ export function createArrowUp() {
     const container = document.createElement("div")
     const arrowUpButton = document.createElement("span")
  
-    container.setAttribute("class", "arrowUpContainer")
+    container.setAttribute("class", "buttonContainer")
     arrowUpButton.setAttribute("class", "material-icons")
 
     arrowUpButton.innerText = "arrow_upward"
@@ -15,7 +15,7 @@ export function createArrowDown() {
     const container = document.createElement("div")
     const arrowDownButton = document.createElement("span")
  
-    container.setAttribute("class", "arrowDownContainer")
+    container.setAttribute("class", "buttonContainer")
     arrowDownButton.setAttribute("class", "material-icons")
 
     arrowDownButton.innerText = "arrow_downward"
@@ -28,7 +28,7 @@ export function createRemove() {
     const container = document.createElement("div")
     const removeButton = document.createElement("span")
  
-    container.setAttribute("class", "arrowUpContainer")
+    container.setAttribute("class", "buttonContainer")
     removeButton.setAttribute("class", "material-icons")
 
     removeButton.innerText = "delete"
@@ -41,7 +41,7 @@ export function createDone() {
     const container = document.createElement("div")
     const doneButton = document.createElement("span")
  
-    container.setAttribute("class", "arrowUpContainer")
+    container.setAttribute("class", "buttonContainer")
     doneButton.setAttribute("class", "material-icons")
 
     doneButton.innerText = "done"

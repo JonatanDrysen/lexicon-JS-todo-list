@@ -7,17 +7,18 @@
     <link rel="stylesheet" href="./styles/todoList.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>Document</title>
+    <title>Todo list</title>
 </head>
 <body>
     <h1 class="header">Todo list</h1>
+    
+    <form id="addTodoForm" class="addTodoForm">
+        <input type="text" placeholder="New todo...">
+        <button type="submit">Add Todo</button>
+    </form>
     <main>
-        <form id="addTodoForm" class="addTodoForm">
-            <input type="text" placeholder="New todo...">
-            <button type="submit">Add Todo</button>
-        </form>
-
         <div class="todoListContainer"></div>
+        <div class="doneTodoListContainer"></div>
     </main>
     <script type="module" src="index.js"></script>
 </body>

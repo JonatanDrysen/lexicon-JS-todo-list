@@ -4,7 +4,15 @@
     padding: 0;
 }
 
-.todoListContainer li div {
-    display: inline-block;
+.todoListContainer li {
     margin: 0.5rem 0;
+}
+
+.todoListContainer li div {
+    display: flex;
+}
+
+.buttonContainer {
+    cursor: pointer;
+    margin: 0 5px;
 }
