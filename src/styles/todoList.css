@@ -1,0 +1,10 @@
+.todoListContainer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.todoListContainer li div {
+    display: inline-block;
+    margin: 0.5rem 0;
+}
