@@ -9,4 +9,11 @@
 .addTodoForm {
     display: flex;
     justify-content: center;
+    padding-bottom: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

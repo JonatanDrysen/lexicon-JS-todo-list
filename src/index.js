@@ -16,6 +16,7 @@ addTodoForm.addEventListener("submit", function handleNewTodo(e) {
     const container = document.querySelector(".todoListContainer")
     container.innerHTML = ""
     renderTodoList()
+    e.target.elements[0].value = ""
 })
 
 function addNewTodo(newTodo) {
@@ -23,7 +24,15 @@ function addNewTodo(newTodo) {
 }
 
 function completeTodo(todo) {
-    console.log("todo completed: ", todo)
+    const index = todoArr.indexOf(todo)
+    doneTodoArr.unshift(todo)
+    todoArr.splice(index, 1)
+    renderTodoList()
+    renderDoneTodoList()
+}
+
+function removeTodo(todo) {
+    console.log("remove todo...")
 }
 
 function renderTodoList() {
@@ -53,4 +62,24 @@ function renderTodoList() {
         todoList.appendChild(todo)
     })
     container.appendChild(todoList)
+}
+
+function renderDoneTodoList() {
+    const container = document.querySelector(".doneTodoListContainer")
+    const doneTodoList = document.createElement("ul")
+    
+    doneTodoArr.forEach((doneTodoItem) => {
+        const doneTodo = document.createElement("li")
+        const doneTodoContainer = document.createElement("div")
+        const doneTodoText = document.createElement("span")
+        const removeButton = createRemove()
+
+        doneTodoText.innerText = doneTodoItem
+        removeButton.addEventListener("click", () => removeTodo())
+
+        doneTodoContainer.append(doneTodoText, removeButton)
+        doneTodo.appendChild(doneTodoContainer)
+        doneTodoList.appendChild(doneTodo)
+    })
+    container.appendChild(doneTodoList)
 }

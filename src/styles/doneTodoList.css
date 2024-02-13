@@ -1,18 +1,18 @@
-.todoListContainer {
+.doneTodoListContainer {
     display: block;
 }
 
-.todoListContainer ul {
+.doneTodoListContainer ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.todoListContainer li {
+.doneTodoListContainer li {
     margin: 0.5rem 0;
 }
 
-.todoListContainer li div {
+.doneTodoListContainer li div {
     display: flex;
 }
 

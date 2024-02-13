@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/todoList.css">
+    <link rel="stylesheet" href="./styles/doneTodoList.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <title>Todo list</title>
 </head>
 <body>
     <h1 class="header">Todo list</h1>
-    
+
     <form id="addTodoForm" class="addTodoForm">
         <input type="text" placeholder="New todo...">
         <button type="submit">Add Todo</button>
     </form>
     <main>
-        <div class="todoListContainer"></div>
-        <div class="doneTodoListContainer"></div>
+        <div class="todoListContainer">
+        </div>
+        <div class="doneTodoListContainer">
+        </div>
     </main>
     <script type="module" src="index.js"></script>
 </body>
